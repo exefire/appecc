@@ -30,6 +30,8 @@
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
 </head>
 <body> 
 
@@ -43,36 +45,37 @@
 </div>
     
 <div class="menu-wrapper">
+    <em><i class="fa fa-question-circle"></i>Swipe the icons, tap to select!</em>
     <div class="menu">
-        <a href="index.html" class="item">
+        <a href="#" class="item" id="selected">
             <img src="images/highlights/1.jpg" alt="img">
             Homepage
         </a>    
-        <a href="features-type.html" class="item">
+        <a href="#" class="item">
             <img src="images/highlights/2.jpg" alt="img">
             Features
         </a>    
-        <a href="gallery-adaptive.html" class="item">
+        <a href="#" class="item">
             <img src="images/highlights/3.jpg" alt="img">
             Gallery
         </a>    
-        <a href="portfolio-adaptive.html" class="item">
+        <a href="#" class="item">
             <img src="images/highlights/4.jpg" alt="img">
             Portfolio
         </a>       
-        <a href="pageapp-sigin.html" class="item">
+        <a href="#" class="item">
             <img src="images/highlights/5.jpg" alt="img">
             App Styled
         </a>        
-        <a href="page-soon.html" class="item">
+        <a href="#" class="item">
             <img src="images/highlights/6.jpg" alt="img">
             Pages
         </a>    
-        <a href="page-blog.html" class="item">
+        <a href="#" class="item">
             <img src="images/highlights/7.jpg" alt="img">
             Blog
         </a>   
-        <a href="contact.html" class="item" id="selected">
+        <a href="#" class="item">
             <img src="images/highlights/8.jpg" alt="img">
             Contact
         </a>
@@ -109,9 +112,9 @@
             
             <ul class="sidebar-navigation">
                 <li class="has-submenu">
-                    <a class="deploy-submenu" href="#"><i class="fa fa-home"></i>Homepages<i class="fa fa-plus"></i></a>
-                    <ul class="submenu">
-                        <li><a href="index.html"><i class="fa fa-angle-right"></i>Classic Home<i class="fa fa-circle"></i></a></li>
+                    <a class="deploy-submenu active-submenu" href="#"><i class="fa fa-home"></i>Homepages<i class="fa fa-plus"></i></a>
+                    <ul class="submenu active-submenu-items">
+                        <li class="active-menu"><a href="index.html"><i class="fa fa-angle-right"></i>Classic Home<i class="fa fa-circle"></i></a></li>
                         <li><a href="index2.html"><i class="fa fa-angle-right"></i>Fullscreen Home<i class="fa fa-circle"></i></a></li>
                         <li><a href="index3.html"><i class="fa fa-angle-right"></i>Landing Home<i class="fa fa-circle"></i></a></li>
                         <li><a href="index4.html"><i class="fa fa-angle-right"></i>Cards Home<i class="fa fa-circle"></i></a></li>
@@ -167,7 +170,7 @@
                 </li>
                 <li><a href="page-video.html"><i class="fa fa-youtube-play"></i>Videos<i class="fa fa-circle"></i></a></li>
                 <li><a href="page-blog.html"><i class="fa fa-pencil"></i>Blog<i class="fa fa-circle"></i></a></li>
-                <li class="active-menu"><a href="contact.html"><i class="fa fa-envelope"></i>Contact<i class="fa fa-circle"></i></a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact<i class="fa fa-circle"></i></a></li>
             </ul>                        
             <div class="sidebar-divider">
                 Copyright 2015. All rights reserved.
@@ -243,96 +246,252 @@
     
     <!-- Page Content-->
     <div id="content" class="snap-content">
-
-        
-        <div class="maps-container">
-            <iframe class="responsive-image maps" src="https://maps.google.com/?ie=UTF8&amp;ll=-33.4529783,-70.5710434&amp;spn=0.006186,0.016512&amp;t=h&amp;z=16&amp;output=embed"></iframe>
-        </div>
-
-        <div class="content">
-            <div class="decoration"></div>
-            <div class="one-half-responsive">
-                <h4>Send us an email!</h4>
-                <p>Use the form to send us a message, it's AJAX and PHP powered and it's easy to use!</p>
-                <div class="container no-bottom">
-                    <div class="contact-form no-bottom"> 
-                        <div class="formSuccessMessageWrap" id="formSuccessMessageWrap">
-                            <div class="big-notification green-notification">
-                                <h3 class="uppercase">Message Sent </h3>
-                                <a href="#" class="close-big-notification">x</a>
-                                <p>Your message has been successfuly sent. Please allow up to 48 hours for a reply! Thank you!</p>
-                            </div>
-                        </div>
-
-                        <form action="php/contact.php" method="post" class="contactForm" id="contactForm">
-                            <fieldset>
-                                <div class="formValidationError" id="contactNameFieldError">
-                                    <div class="static-notification-red tap-dismiss-notification">
-                                        <p class="center-text uppercase">Name is required!</p>
-                                    </div>
-                                </div>             
-                                <div class="formValidationError" id="contactEmailFieldError">
-                                    <div class="static-notification-red tap-dismiss-notification">
-                                        <p class="center-text uppercase">Mail address required!</p>
-                                    </div>
-                                </div> 
-                                <div class="formValidationError" id="contactEmailFieldError2">
-                                    <div class="static-notification-red tap-dismiss-notification">
-                                        <p class="center-text uppercase">Mail address must be valid!</p>
-                                    </div>
-                                </div> 
-                                <div class="formValidationError" id="contactMessageTextareaError">
-                                    <div class="static-notification-red tap-dismiss-notification">
-                                        <p class="center-text uppercase">Message field is empty!</p>
-                                    </div>
-                                </div>   
-                                <div class="formFieldWrap">
-                                    <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>
-                                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="contactNameField"/>
-                                </div>
-                                <div class="formFieldWrap">
-                                    <label class="field-title contactEmailField" for="contactEmailField">Email: <span>(required)</span></label>
-                                    <input type="text" name="contactEmailField" value="" class="contactField requiredField requiredEmailField" id="contactEmailField"/>
-                                </div>
-                                <div class="formTextareaWrap">
-                                    <label class="field-title contactMessageTextarea" for="contactMessageTextarea">Message: <span>(required)</span></label>
-                                    <textarea name="contactMessageTextarea" class="contactTextarea requiredField" id="contactMessageTextarea"></textarea>
-                                </div>
-                                <div class="formSubmitButtonErrorsWrap">
-                                    <input type="submit" class="buttonWrap button button-green contactSubmitButton" id="contactSubmitButton" value="SUBMIT" data-formId="contactForm"/>
-                                </div>
-                            </fieldset>
-                        </form>       
+        <div class="slider-container full-bottom">
+            <div class="homepage-slider" data-snap-ignore="true">                
+                <div>
+                    <div class="overlay"></div>
+                    <div class="homepage-slider-caption homepage-left-caption">
+                        <h3>Swipe me!</h3>
+                        <p>Hope you enjoy our latest item!</p>
                     </div>
+                    <img src="images/pictures/3.jpg" class="responsive-image" alt="img">
+                </div>
+                <div>
+                    <div class="overlay"></div>
+                    <div class="homepage-slider-caption homepage-center-caption">
+                        <h3>Slider</h3>
+                        <p>Our slider is awesome!</p>
+                    </div>
+                    <img src="images/pictures/5.jpg" class="responsive-image" alt="img">
+                </div>
+                <div>
+                    <div class="overlay"></div>
+                    <div class="homepage-slider-caption homepage-right-caption">
+                        <h3>Responsive</h3>
+                        <p>And it's fully responsive!</p>
+                    </div>
+                    <img src="images/pictures/6.jpg" class="responsive-image" alt="img">
                 </div>
             </div>
-            <div class="decoration hide-if-responsive"></div>
-            <div class="one-half-responsive last-column">
-                <div class="container no-bottom">
-                    <h4>Contact Information</h4>
-                    <p>
-                        <strong>Postal Information</strong><br>
-                        PO Box 16122 Collins Street West<br>
-                        Victoria 8007 Australia
-                    </p>
-                    <p>
-                        <strong>Envato Headquarters</strong><br>
-                        121 King Street, Melbourne <br>
-                        Victoria 3000 Australia
-                    </p>
-                    <p>
-                        <strong>Contact Information:</strong><br>
-                        <a href="#" class="contact-call"><i class="fa fa-phone"></i>Phone: + 123 456 7890</a>
-                        <a href="#" class="contact-text"><i class="fa fa-comments"></i>Message: + 123 456 7890</a>
-                        <a href="#" class="contact-mail"><i class="fa fa-envelope"></i>Email: mail@doamin.com</a>
-                        <a href="#" class="contact-facebook"><i class="fa fa-facebook"></i>Fanpage: enabled.labs</a>
-                        <a href="#" class="contact-twitter"><i class="fa fa-twitter"></i>Twitter: @iEnabled</a>
-                    </p>
-                </div>            
+        </div>
+        
+        <div class="content">       
+            <div class="container large-title no-bottom">
+
+<h1>Conéctate</h1>
+<div id="responsecontainer"></div>
+                
+                <h3>Welcome, stranger!</h3>
+                <p>
+                    A user experience, design focused template, created to make using as easy and 
+                    as beautiful as possible even on huge screens!
+                </p>
+
+                <div class="center-socials">
+                    <a href="#" class="facebook-color facebook-social"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google-color google-social"><i class="fa fa-google-plus"></i></a>
+                    <a href="#" class="twitter-color twitter-social"><i class="fa fa-twitter"></i></a>
+                </div>
             </div>
             <div class="decoration"></div>
         </div>
         
+        <!-- Content Heding -->
+        <div class="content-heading">
+        	<h4>Services</h4>
+            <p>The things we love to do, for you!</p>
+            <i class="fa fa-cog"></i>
+            <div class="overlay"></div>
+            <img src="images/pictures/5w.jpg" alt="img">
+        </div>
+        
+        <!-- Page Content-->
+        <div class="content">
+            <div class="decoration"></div>
+            <div class="container no-bottom">
+                <!-- Page Columns-->
+            	<div class="one-half-responsive">
+                    <p class="thumb-left no-bottom">
+                        <img src="images/pictures/1s.jpg" alt="img">
+                        <strong>Mobile app feel </strong>
+                        <em><br>Lorem Ipsum is simply dummy text of the printing and typeset. </em>
+                    </p>
+                    <div class="thumb-clear"></div>
+                </div>
+                <div class="decoration hide-if-responsive"></div>
+                <div class="one-half-responsive last-column">        
+                    <p class="thumb-right no-bottom">
+                        <img src="images/pictures/2s.jpg" alt="img">
+                        <strong>Elite Quality Product</strong>
+                        <em><br>Lorem Ipsum is simply dummy text of the printing and typeset. </em>
+                    </p>
+                    <div class="thumb-clear"></div>
+                </div>
+                <div class="decoration hide-if-responsive"></div>
+            	<div class="one-half-responsive">
+                    <p class="thumb-left no-bottom">
+                        <img src="images/pictures/3s.jpg" alt="img">
+                        <strong>Mobile and Tablet</strong>
+                        <em><br>Lorem Ipsum is simply dummy text of the printing and typeset. </em>
+                    </p>
+                    <div class="thumb-clear"></div>
+                </div>
+                <div class="decoration hide-if-responsive"></div>
+                <div class="one-half-responsive last-column">        
+                    <p class="thumb-right no-bottom">
+                        <img src="images/pictures/4s.jpg" alt="img">
+                        <strong>Smooth transitions</strong>
+                        <em><br>Lorem Ipsum is simply dummy text of the printing and typeset. </em>
+                    </p>
+                    <div class="thumb-clear"></div>
+                </div>
+            </div>
+            <div class="decoration"></div>             
+        </div>
+        
+        <!-- Content Heading -->
+        <div class="content-heading">
+        	<h4>The Staff</h4>
+            <p>Meet our awesome staff!</p>
+            <i class="fa fa-user"></i>
+            <div class="overlay"></div>
+            <img src="images/pictures/6w.jpg" alt="img">
+        </div> 
+        
+        <!-- Page Content-->
+        <div class="content">
+        	<div class="decoration"></div>
+            <!-- Staff Slider-->
+            <div class="container">
+                <a href="#" class="next-staff"></a>
+                <a href="#" class="prev-staff"></a>
+                <div class="staff-slider" data-snap-ignore="true">
+                    <div>
+                        <div class="staff-item">
+                            <img src="images/pictures/1s.jpg" alt="img">
+                            <h4>John Doe</h4>
+                            <em>Web Designer</em>
+                            <strong>We love quotes, and sometimes it's annoying to see tons of them that you need to scroll to!</strong>
+                            <a href="#" class="button button-red center-button">Call</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="staff-item">
+                            <img src="images/pictures/2s.jpg" alt="img">
+                            <h4>Jane Hidden</h4>
+                            <em>Front End Developer</em>
+                            <strong>We love quotes, and sometimes it's annoying to see tons of them that you need to scroll to!</strong>
+                            <a href="#" class="button button-green center-button">Text</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="staff-item">
+                            <img src="images/pictures/3s.jpg" alt="img">
+                            <h4>Johanna Pear</h4>
+                            <em>Business Manager</em>
+                            <strong>We love quotes, and sometimes it's annoying to see tons of them that you need to scroll to!</strong>
+                            <a href="#" class="button button-blue center-button">Mail</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="staff-item">
+                            <img src="images/pictures/4s.jpg" alt="img">
+                            <h4>Mike Grape</h4>
+                            <em>Web Designer</em>
+                            <strong>We love quotes, and sometimes it's annoying to see tons of them that you need to scroll to!</strong>
+                            <a href="#" class="button button-dark center-button">Read More</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="staff-item">
+                            <img src="images/pictures/5s.jpg" alt="img">
+                            <h4>Victor Leaf</h4>
+                            <em>Front End Developer</em>
+                            <strong>We love quotes, and sometimes it's annoying to see tons of them that you need to scroll to!</strong>
+                            <a href="#" class="button button-orange center-button">Facebook</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="staff-item">
+                            <img src="images/pictures/6s.jpg" alt="img">
+                            <h4>Snow White</h4>
+                            <em>Business Manager</em>
+                            <strong>We love quotes, and sometimes it's annoying to see tons of them that you need to scroll to!</strong>
+                            <a href="#" class="button button-yellow center-button">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="decoration"></div>
+        </div>
+        
+        <!-- Content Heading-->
+        <div class="content-heading">
+        	<h4>Featured Project</h4>
+            <p>Check and enjoy our featured item</p>
+            <i class="fa fa-star-o"></i>
+            <div class="overlay"></div>
+            <img src="images/pictures/7w.jpg" alt="img">
+        </div>
+        
+        <!-- Page Content-->
+        <div class="content">
+        	<div class="decoration"></div>
+            	<div class="container">
+                	<div class="one-half-responsive">
+                    	<img src="images/mobile1.png" alt="img" class="responsive-image">
+                    </div>
+                    <div class="one-half-responsive last-column">
+                    	<h3 class="center-if-mobile no-bottom">Awesome project title</h3>
+                        <em class="center-if-mobile small-text half-bottom">Awesome project subtitle</em>
+                        <p class="center-if-mobile no-bottom">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in quam mauris. 
+                            Nam condimentum convallis lectus, ac tempus massa eleifend sit amet. Ut nec orci 
+                            ut urna mollis elementum a et diam. Donec varius orci a convallis convallis. 
+                        </p>
+                    </div>
+                </div>
+            <div class="decoration"></div>
+        </div>
+        
+        <!-- Content Heading -->
+        <div class="content-heading">
+        	<h4>Testimonials</h4>
+            <p>Awesome reviews by our customers!</p>
+            <i class="fa fa-quote-left"></i>
+            <div class="overlay"></div>
+            <img src="images/pictures/6w.jpg" alt="img">
+        </div> 
+        
+        <div class="content">
+            <div class="decoration"></div>        
+            <div class="quote-slider full-bottom" data-snap-ignore="true">
+                <div>
+                    <h4>
+                        Great all around product, with some of the best documentation I have ever seen. Really thorough and easy to follow! 
+                        Also the support responsiveness is really fantastic. Extremely happy with everything. Thanks again!
+                    </h4>
+                    <a href="#">ChrisPizzoDesign - ThemeForest</a>
+                </div>
+                <div>
+                    <h4>
+                        Exceptional theme. Completely customisable, the best customer service I've ever had from a theme/plugin. Not only are 
+                        they fast but polite and don't make you feel like a doofus even when you are probably being one.                        
+                    </h4>
+                    <a href="#">larzick27 - ThemeForest</a>
+                </div>
+                <div>
+                    <h4>
+                        One of the best themes I've used so far and is very well documented, coded and very clean. Got it intergrated with 
+                        wordpress in less than an hour! But this is an amazing template built with a load of features!
+                    </h4>
+                    <a href="#">ramseycosay18 - ThemeForest</a>
+                </div>
+            </div>
+                
+            <div class="decoration"></div>            
+        </div>
+            
         <!-- Page Footer-->
         <div class="footer">
             <div class="footer-socials half-bottom">
@@ -344,7 +503,7 @@
             </div>
             <p class="center-text">Copyright 2015. All rights reserved.</p>
         </div>    
- 
+        
     </div>
     
     <div class="share-bottom">
@@ -380,6 +539,6 @@
     </div>
     
 </div>
-
+            
 </body>
 
