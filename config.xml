@@ -34,5 +34,5 @@
     <preference name="fullscreen" value="true" />
   </platform>
 	
-	<plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" spec="1.2.0" source="pgb" />
+	
 </widget>
