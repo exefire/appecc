@@ -8,7 +8,6 @@
   <description>Iglesia Encuentro con Cristo Ñuñoa.</description>
   <author href="https://www.exefire.com" email="egallardo@exefire.com">Exequiel Gallardo</author>
   <access origin="*" />
-  <access origin="*.exefire.*" />
   <icon src="res/icon.png" />
 	
 	
