@@ -2,11 +2,6 @@
 
 function enlace(url){
 	window.open(url, '_blank', 'location=no,closebuttoncaption=Cerrar');
-	alert('casas varias');
-}
-
-function alerta(msg){
-	alert('MSG: '+msg);
 }
 
 (function ($) {
