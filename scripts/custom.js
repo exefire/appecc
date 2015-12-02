@@ -1,8 +1,8 @@
 // JavaScript Document
 
 function enlace(url){
+	window.open(url, '_blank', 'location=no,closebuttoncaption=Cerrar');
 	alert('casas varias');
-	window.open(url, '_blank');
 }
 
 function alerta(msg){
