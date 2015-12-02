@@ -4,6 +4,10 @@ function enlace(url){
 	window.open(url, '_blank', 'location=no,closebuttoncaption=Cerrar');
 }
 
+function alerta(msg){
+	alert('MSG: '+msg);
+}
+
 (function ($) {
 
 $(window).load(function() { 
