@@ -2,7 +2,7 @@
 
 function enlace(url){
 	alert('casas varias');
-	window.open(url, '_blank', 'location=no,closebuttoncaption=Cerrar');
+	window.open(url, '_blank');
 }
 
 function alerta(msg){
