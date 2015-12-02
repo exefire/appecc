@@ -78,7 +78,7 @@ $(document).ready(function() {
 		$('.portfolio-wide').hide(0);
 	});
 
-	$('.open-menu').click(function() {
+	$('.open-menu, .main-logo').click(function() {
         $('.header, .menu-wrapper').removeClass('hide-header-right');
         $('.header, .menu-wrapper').addClass('hide-header-left');
         $('.menu-wrapper').addClass('hide-menu-wrapper');  
@@ -123,7 +123,7 @@ $(document).ready(function() {
         return false;
     });    
     
-    $('.close-share-bottom, #content, .open-menu, .open-more').click(function(){
+    $('.close-share-bottom, #content, .open-menu, .open-more, .main-logo').click(function(){
        $('.share-bottom').removeClass('active-share-bottom'); 
     });
     
