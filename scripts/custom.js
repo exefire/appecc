@@ -1,5 +1,9 @@
 // JavaScript Document
 
+function enlace(url){
+	window.open(url, '_blank', 'location=no,closebuttoncaption=Cerrar');
+}
+
 (function ($) {
 
 $(window).load(function() { 
