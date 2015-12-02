@@ -10,6 +10,9 @@
   <access origin="*" />
   <access origin="*.exefire.*" />
   <icon src="res/icon.png" />
+	<splash src="res/splash.png" />
+	
+	
   <platform name="ios">
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" />
@@ -25,8 +28,11 @@
     <icon src="icon-40.png" platform="ios" width="40" height="40" />
     <icon src="icon-40@2x.png" platform="ios" width="80" height="80" />
   </platform>
+	
   <platform name="android">
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" />
   </platform>
+	
+	<plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" spec="1.2.0" source="pgb" />
 </widget>
