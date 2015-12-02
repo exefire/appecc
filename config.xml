@@ -7,8 +7,7 @@
   <name>Encuentro</name>
   <description>Iglesia Encuentro con Cristo Ñuñoa.</description>
   <author href="https://www.exefire.com" email="egallardo@exefire.com">Exequiel Gallardo</author>
-  <access origin="*" />
-	<allow-navigation href="*" />
+ 	<allow-navigation href="*" />
 	<allow-intent href="*" />
 	<allow-intent href="tel:*" />
 	<allow-intent href="geo:*" />
@@ -40,4 +39,6 @@
 	
 	<plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" spec="1.2.0" source="pgb" />
 	<plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="pgb" />
+	
+	<access origin="*" />
 </widget>
