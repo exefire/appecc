@@ -10,6 +10,7 @@
   <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="prerendered-icon" value="true" />
   <icon src="res/icon.png" default="true" />
+	<platform name="ios|android" />
   <platform name="ios">
     <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
     <icon src="res/ios/icon-60.png" width="60" height="60" />
