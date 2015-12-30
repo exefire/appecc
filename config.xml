@@ -19,18 +19,32 @@
   <platform name="ios">
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" />
-    <preference name="target-device" value="handset" />
+		<preference name="target-device" value="universal" /> 
     <preference name="prerendered-icon" value="true" />
+		<!-- Iconos iOS -->
+    <icon src="res/ios/icon-60.png" platform="ios" width="60" height="60" />
+    <icon src="res/ios/icon-60@2x.png" platform="ios" width="120" height="120" />
     <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
-    <icon src="icon-60.png" platform="ios" width="60" height="60" />
-    <icon src="icon-60@2x.png" platform="ios" width="120" height="120" />
-    <icon src="icon-76.png" platform="ios" width="76" height="76" />
-    <icon src="icon-76@2x.png" platform="ios" width="152" height="152" />
-    <icon src="icon-small.png" platform="ios" width="29" height="29" />
-    <icon src="icon-small@2x.png" platform="ios" width="58" height="58" />
-    <icon src="icon-40.png" platform="ios" width="40" height="40" />
-    <icon src="icon-40@2x.png" platform="ios" width="80" height="80" />
+    <icon src="res/ios/icon-76.png" platform="ios" width="76" height="76" />
+    <icon src="res/ios/icon-76@2x.png" platform="ios" width="152" height="152" />
+    <icon src="res/ios/icon-small.png" platform="ios" width="29" height="29" />
+    <icon src="res/ios/icon-small@2x.png" platform="ios" width="58" height="58" />
+    <icon src="res/ios/icon-40.png" platform="ios" width="40" height="40" />
+    <icon src="res/ios/icon-40@2x.png" platform="ios" width="80" height="80" />
+		<!-- Pantallas Inicio iOS -->
+		<splash src="res/ios/Default.png" platform="os" width="320" height="480"/>
+		<splash src="res/ios/Default@2x.png" platform="os" width="640" height="960"/>
+		<splash src="res/ios/Default-568h@2x.png" platform="os" width="640" height="1136"/>
+		<splash src="res/ios/Default-Portrait.png" platform="os" width="768" height="1004"/>
+		<splash src="res/ios/Default-Portrait@2x.png" platform="os" width="1536" height="2008"/>
+		<splash src="res/ios/Default-PortraitUpsideDown.png" platform="os" width="768" height="1004"/>
+		<splash src="res/ios/Default-PortraitUpsideDown@2x.png" platform="os" width="1536" height="2008"/>
+		<splash src="res/ios/Default-Landscape.png" platform="os" width="1024" height="768"/>
+		<splash src="res/ios/Default-LandscapeLeft@2x.png" platform="os" width="2048" height="1536"/>
+		<splash src="res/ios/Default-LandscapeRight.png" platform="os" width="1024" height="768"/>
+		<splash src="res/ios/Default-LandscapeRight@2x.png" platform="os" width="2048" height="1536"/>
   </platform>
+
 	
   <platform name="android">
     <preference name="orientation" value="portrait" />
