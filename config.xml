@@ -13,7 +13,7 @@
 	<allow-intent href="geo:*" />
 	<allow-intent href="mailto:*" />
 	
-  <icon src="res/icon.png" />
+  <icon src="icon.png" />
 	
 	
   <platform name="ios">
@@ -22,9 +22,11 @@
 		<preference name="target-device" value="universal" /> 
     <preference name="prerendered-icon" value="true" />
 		<!-- Iconos iOS -->
+    <icon src="res/ios/icon-57.png" platform="ios" width="57" height="57" />
     <icon src="res/ios/icon-60.png" platform="ios" width="60" height="60" />
     <icon src="res/ios/icon-60@2x.png" platform="ios" width="120" height="120" />
     <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+    <icon src="res/ios/icon-72.png" platform="ios" width="72" height="72" />
     <icon src="res/ios/icon-76.png" platform="ios" width="76" height="76" />
     <icon src="res/ios/icon-76@2x.png" platform="ios" width="152" height="152" />
     <icon src="res/ios/icon-small.png" platform="ios" width="29" height="29" />
